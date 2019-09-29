@@ -4,10 +4,26 @@
 
 #define PI 3.14159265
 
+void fun(int X);
+
+void fun(int X)
+{
+	double area = 12;
+	double sum=0;
+	for (int i=0;i<X;i++)
+	{
+		sum = sum + area;
+		area = area/2;
+	}
+	printf("\narea = %lf", sum);
+}
+
 int  main() //main function begins
 {
-	double a=3, b=2, e, area, sum;
+	double a=3, b=2, e;
 	int i;
+	
+	printf("\nFor area of rectangle to be maximum 12 x SinA x CosA should be maximum\n\n");
     
     //Option A is false because eccentricity of all ellipse will be equal
     printf("Option A");
@@ -17,50 +33,14 @@ int  main() //main function begins
 	
 	//Option B is true
 	printf("\nOption B");
-	area = 12;
-	sum=0;
-	for (i=0;i<10;i++)
-	{
-		sum = sum + area;
-		area = area/2;
-	}
-	printf("\narea = %lf", sum);
 	
-	area = 12;
-	sum=0;
-	for (i=0;i<20;i++)
-	{
-		sum = sum + area;
-		area = area/2;
-	}
-	printf("\narea = %lf", sum);
+	fun(5);
+	fun(10);
+	fun(20);
+	fun(30);
+	fun(50);
+	fun(10000);
 	
-	area = 12;
-	sum=0;
-	for (i=0;i<50;i++)
-	{
-		sum = sum + area;
-		area = area/2;
-	}
-	printf("\narea = %lf", sum);
-	
-	area = 12;
-	sum=0;
-	for (i=0;i<100;i++)
-	{
-		sum = sum + area;
-		area = area/2;
-	}
-	printf("\narea = %lf", sum);
-	
-	area = 12;
-	sum=0;
-	for (i=0;i<10000;i++)
-	{
-		sum = sum + area;
-		area = area/2;
-	}
-	printf("\narea = %lf", sum);
 	printf("\nCORRECT\n\n");
 	
 	//Option C is true
