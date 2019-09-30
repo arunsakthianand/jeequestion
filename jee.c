@@ -15,7 +15,7 @@ void fun(int X)
 		sum = sum + area;
 		area = area/2;
 	}
-	printf("\narea = %lf", sum);
+	printf("\n\tarea for %d terms = %lf",X, sum);
 }
 
 int  main() //main function begins
@@ -23,16 +23,16 @@ int  main() //main function begins
 	double a=3, b=2, e;
 	int i;
 	
-	printf("\nFor area of rectangle to be maximum 12 x SinA x CosA should be maximum\n\n");
+	printf(" For area of rectangle to be maximum 24 x SinX x CosX should be maximum\n\n");
     
     //Option A is false because eccentricity of all ellipse will be equal
-    printf("Option A");
+    printf("    Option A");
     e = pow((1-pow(b,2)/pow(a,2)),0.5);
-    printf("\nEccentricity is %lf", e);
-    printf("\nINCORRECT\n\n");
+    printf("\n\tEccentricity is %lf", e);
+    printf("\n\tINCORRECT\n");
 	
 	//Option B is true
-	printf("\nOption B");
+	printf("\n    Option B");
 	
 	fun(5);
 	fun(10);
@@ -41,24 +41,24 @@ int  main() //main function begins
 	fun(50);
 	fun(10000);
 	
-	printf("\nCORRECT\n\n");
+	printf("\n\tCORRECT\n");
 	
 	//Option C is true
-	printf("\nOption C");
-	printf("\nFor 9th ellipse");
+	printf("\n    Option C");
+	printf("\n\tFor 9th ellipse");
 	for (i=0;i<8;i++)
 	{
 		a=a/pow(2,0.5);
 		b=b/pow(2,0.5);
 	}
-	printf("\na = %lf , b = %lf", a,b);
-	printf("\nLength of latus rectum = %lf", 2*pow(b,2)/a);
-	printf("\nCORRECT\n\n");
+	printf("\n\ta = %lf , b = %lf", a,b);
+	printf("\n\tLength of latus rectum = %lf", 2*pow(b,2)/a);
+	printf("\n\tCORRECT\n");
 	
 	//Option D is true
-	printf("\nOption D");
-	printf("\nDistance of focus from center in E9 is = %lf", a*e);
-	printf("\nINCORRECT");
+	printf("\n    Option D");
+	printf("\n\tDistance of focus from center in E9 is = %lf", a*e);
+	printf("\n\tINCORRECT");
 	
 	
 return 0;
